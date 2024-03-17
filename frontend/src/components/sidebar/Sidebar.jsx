@@ -1,13 +1,27 @@
-import React from "react";
-import SearchBar from "./SearchBar";
-import Contacts from "./Contacts";
+import { useEffect } from "react";
+import usePerson from "../../context/usePerson.js";
+import useGetContacts from "../../hooks/useGetContacts.js";
+import Spinner from "../Spinner.jsx";
+import Person from "./Person.jsx";
 
 export default function Sidebar() {
+  const { loading, contacts } = useGetContacts();
+  const { setSelectedPerson } = usePerson();
+
+  useEffect(() => {
+    return () => {
+      setSelectedPerson(null);
+    };
+  }, []);
+
   return (
-    <div className="border-4 border-white rounded-lg w-1/3 h-96 align-middle p-4 overflow-auto">
-      <SearchBar/>
-      <br />
-      <Contacts />
+    <div
+      className="m-[1%] p-[5%] h-80 overflow-auto flex flex-col gap-2">
+      {loading ? (
+        <Spinner />
+      ) : (
+        contacts.map((user) => <Person user={user} key={user._id} />)
+      )}
     </div>
   );
 }

@@ -1,36 +1,40 @@
-import React, { useState } from 'react'
-import { IoSendSharp  } from "react-icons/io5";
-import useSendMessage from '../../hooks/useSendMessage';
-import Spinner from "../Spinner.jsx"
-import toast from 'react-hot-toast';
+import React, { useState } from "react";
+import { IoSendSharp } from "react-icons/io5";
+import useSendMessage from "../../hooks/useSendMessage";
+import Spinner from "../Spinner.jsx";
+import toast from "react-hot-toast";
 export default function MessageInput() {
+  const { loading, sendMessage } = useSendMessage();
+  const [message, setMessage] = useState("");
 
-  const {loading,sendMessage}=useSendMessage();
-  const [message,setMessage]=useState("");
-
-  const handleSubmit=async (e)=>{
-    e.preventDefault()
-    if(message==""){
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (message == "") {
       toast.error("Type Something To Send");
       return;
     }
     await sendMessage(message);
     setMessage("");
-  }
+  };
   return (
-    <div className="flex flex-row gap-2 ">
+    <div className="flex flex-row gap-2 h-9 m-1">
       <input
-        className="placeholder:italic flex w-full rounded-md border-2 text-white border-gray-700 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400"
+        className="w-full px-3 py-2 text-sm border-2 rounded-md border-black bg-transparent placeholder:italic placeholder:text-gray-900"
         type="text"
         placeholder="Type Your Message Here..."
         value={message}
-        onChange={(e)=>{
+        onChange={(e) => {
           setMessage(e.target.value);
         }}
+        
       ></input>
-      <div className="flex content-center border-2 rounded-md border-gray-700 hover:border-white hover:scale-110 p-1">
-       {loading?<Spinner/>:<IoSendSharp  className="text-4xl" onClick={handleSubmit}/>}
+      <div className="content-center hover:scale-125 p-1">
+        {loading ? (
+          <Spinner />
+        ) : (
+          <IoSendSharp className="text-3xl" onClick={handleSubmit} />
+        )}
       </div>
     </div>
-  )
+  );
 }
