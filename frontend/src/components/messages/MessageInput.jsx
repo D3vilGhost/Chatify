@@ -17,7 +17,7 @@ export default function MessageInput() {
     setMessage("");
   };
   return (
-    <div className="flex flex-row gap-2 h-9 m-1">
+    <div className="flex flex-row gap-2">
       <input
         className="w-full px-3 py-2 text-sm border-2 rounded-md border-black bg-transparent placeholder:italic placeholder:text-gray-900"
         type="text"

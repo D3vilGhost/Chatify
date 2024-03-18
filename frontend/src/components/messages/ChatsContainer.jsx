@@ -21,7 +21,7 @@ export default function ChatsContainer() {
   }, [messages]);
 
   return (
-    <div>
+    <div className="">
       {loading ? (
         <Spinner />
       ) : messages.length == 0 ? (

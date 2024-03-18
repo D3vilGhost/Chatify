@@ -1,5 +1,4 @@
 import Sidebar from "../components/sidebar/Sidebar";
-import MessageInput from "../components/messages/MessageInput";
 import MessageContainer from "../components/messages/MessageContainer";
 import DesktopHeader from "../components/DesktopHeader.jsx";
 import DefaultContainer from "../components/messages/DefaultContainer.jsx"

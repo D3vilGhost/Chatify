@@ -3,7 +3,7 @@ import LogOutButton from "./LogOutButton.jsx";
 import SearchBar from "./SearchBar.jsx";
 export default function DesktopHeader() {
   return (
-    <div className="grid grid-cols-3 self-center">
+    <div className="grid grid-cols-3 self-center ">
       <div className="justify-self-start w-[50%] self-center">
         <SearchBar />
       </div>

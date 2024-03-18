@@ -8,14 +8,6 @@ html {
 	border: 0px;
 }
 
-body {
-	margin: 0px;
-	padding-left: 20%;
-	padding-right: 20%;
-	padding-top: 5%;
-	padding-bottom: 5%;
-}
-
 .desktop_bg {
 	background:url("/BG_desktop.jpg");
 	background-repeat: no-repeat;
