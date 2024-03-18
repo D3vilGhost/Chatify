@@ -12,31 +12,39 @@ Chatify is a dynamic full-stack project built on the MERN stack, revolutionizing
 
 ## ▶️How To Use:
 1) Simple Registration: 
-   a) Click "Register", fill out the form, and submit.
+
+   - Click "Create Account", fill out the form, and submit.
 
 2) Login: 
-   a) Click "Login", enter email and password, then click "Login".
+
+   - Click "Login", enter Username and Password, then click "Login".
 
 3) Search for User by Their Username: 
 
    a) Utilize the search bar to find users by their usernames.
+
    b) Select the desired user from the search results to start chatting.
 
 ## ▶️How To Run Locally:
 1. Clone the repository:  
-   - git clone https://github.com/D3vilGhost/Chatify
+    - git clone https://github.com/D3vilGhost/Chatify
 
 2. Install dependencies:
-   - npm install
-   
-3. Set Your Environment Variables
-    - PORT=...
-    - JWT_SECRET=...
-    - MONGODB_URI=...
+    - npm install
+    - cd ./frontend
+    - npm install
 
-4. Start the development server: 
-   - npm run server
+3. Set Your Environment Variables in ".env" file in root directory as
+    - PORT = ...
+    - JWT_SECRET = ...
+    - MONGODB_URI = ...
+    - NODE_ENV = development
 
-4. Visit the 
+4. Start the development server in root directory: 
+    - npm run server
+
+5. Visit the URL:
+    - http://localhost:3000/
+
 
 
