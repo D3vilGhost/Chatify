@@ -12,10 +12,10 @@ export const SocketContextProvider = ({ children }) => {
 	const [socket, setSocket] = useState(null);
 	const [onlineUsers, setOnlineUsers] = useState([]);
 	const { authUser } = useAuthContext();
-
+	const url=process.env.NODE_ENV=='development'?"http://localhost:5000":"https://chatify-8c5h.onrender.com";
 	useEffect(() => {
 		if (authUser) {
-			const socket = io("https://chatify-8c5h.onrender.com/", {
+			const socket = io(url, {
 				query: {
 					userId: authUser._id,
 				},
