@@ -42,6 +42,10 @@ function handleInputErrors(username, password) {
 		toast.error("Please fill in all fields");
 		return false;
 	}
+	if(username.includes(" ")){
+		toast.error("Username cannot have space in it!");
+		return false;
+	}
 
 	return true;
 }
