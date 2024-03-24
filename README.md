@@ -1,14 +1,15 @@
 ## Chatify
-Chatify is a dynamic full-stack project built on the MERN stack, revolutionizing communication through its intuitive chat application. Leveraging the power of Socket.IO, Chatify enables seamless real-time messaging, fostering instant connections among users. With its sleek interface and robust functionality, users can engage in conversations effortlessly, whether it's one-on-one or within groups. Designed with scalability and performance in mind, Chatify offers a reliable platform for individuals and businesses alike to connect and collaborate in real time. Whether it's sharing ideas, coordinating tasks, or simply staying in touch, Chatify elevates the chatting experience to new heights.
+Chatify is a sophisticated chat application developed using Node.js and MongoDB,offering seamless communication with robust data storage capabilities. It leveragesthe power of Node.js for efficientreal-time messaging and utilizes MongoDB forscalable and reliable data management. With Chatify, users can engage in conversations effortlessly while enjoying the flexibility and stability provided by its advanced technology stack.
  
 ## 💻 Technologies used:
 - HTML
-- CSS
+- CSS + TailwindCSS
 - JS
 - ReactJS + Vite
 - NodeJS
 - MongoDB
 - Socket.io
+- bcrypt, react-icons, react-hot-toast, zustand
 
 ## ▶️How To Use:
 1) Simple Registration: 
@@ -17,12 +18,11 @@ Chatify is a dynamic full-stack project built on the MERN stack, revolutionizing
 
 2) Login: 
 
-   - Click "Login", enter Username and Password, then click "Login".
+   - Enter Username and Password, then click "Login".
 
 3) Search for User by Their Username: 
 
-   a) Utilize the search bar to find users by their usernames.
-
+   a) Utilize the search bar to find users by their usernames and add them friend.
    b) Select the desired user from the search results to start chatting.
 
 ## ▶️How To Run Locally:

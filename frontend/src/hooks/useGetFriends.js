@@ -1,23 +1,21 @@
 import { useEffect, useState } from "react"
 import toast from "react-hot-toast"
+import {useFriendListContext} from  "../context/FriendListContext.jsx";
 
-
-export default function useGetContacts(){
+export default function useGetFriends(){
 
     const [loading,setLoading]=useState(false);
-    const [contacts,setContacts]=useState([]);
+    const {friendList,setFriendList}=useFriendListContext();
 
-    const getContacts=async()=>{
+    const getFriends=async()=>{
         setLoading(true);
         try{
-            const res=await fetch("/api/users");
+            const res=await fetch("/api/friend");
             const data= await res.json();
-            
             if(data.error){
                 throw new Error(data.error);
             }
-            
-            setContacts(data);
+            setFriendList(data);
         }
         catch(error){
             toast.error(error.message);
@@ -28,7 +26,7 @@ export default function useGetContacts(){
 
     };
     useEffect(()=>{
-        getContacts();
+        getFriends();
     },[]);
-    return {loading,contacts,getContacts};
+    return {loading};
 }
