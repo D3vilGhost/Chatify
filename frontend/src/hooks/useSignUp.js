@@ -45,7 +45,12 @@ function handleInputErrors({ fullName, username, password, confirmPassword, gend
 		toast.error("Passwords do not match");
 		return false;
 	}
-
+	
+	if(username.includes(" ")){
+		toast.error("Username cannot have space in it!");
+		return false;
+	}
+	
 	if (password.length < 6) {
 		toast.error("Password must be at least 6 characters");
 		return false;
